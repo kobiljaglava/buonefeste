@@ -1,0 +1,152 @@
+.christmas-light {
+    border-radius: 50% 50% 50% 50% / 30% 30% 60% 60%;
+}
+
+.christmas-light-purple {
+    background: #8e2de2;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+
+.christmas-light-purple-anim {
+    animation: glow-light-purple 3s linear infinite;
+}
+
+@keyframes glow-light-purple {
+    0%,
+    100% {
+        background: #8e2de2;
+        box-shadow: 0 0.375rem 1.5rem 0.188rem #8e2de2;
+    }
+
+    50% {
+        background: rgba(142, 45, 226, 0.8);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(142, 45, 226, 0.4);
+    }
+}
+
+.christmas-light-blue {
+    background: #396afc;
+    background: linear-gradient(to right, #2948ff, #396afc);
+}
+
+.christmas-light-blue-anim {
+    animation: glow-light-blue 6s linear infinite;
+}
+
+@keyframes glow-light-blue {
+    0%,
+    100% {
+        background: #396afc;
+        box-shadow: 0 0.375rem 1.5rem 0.188rem #396afc;
+    }
+
+    50% {
+        background: rgba(57, 106, 252, 0.8);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(57, 106, 252, 0.4);
+    }
+}
+
+.christmas-light-green {
+    background: #11998e;
+    background: linear-gradient(to right, #38ef7d, #11998e);
+}
+
+.christmas-light-green-anim {
+    animation: glow-light-green 3s linear infinite;
+}
+
+@keyframes glow-light-green {
+    0%,
+    100% {
+        background: #11998e;
+        box-shadow: 0 0.375rem 1.5rem 0.188rem #11998e;
+    }
+
+    50% {
+        background: rgba(17, 153, 142, 0.8);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(17, 153, 142, 0.4);
+    }
+}
+
+.christmas-light-yellow {
+    background: #ffe000;
+    background: linear-gradient(to right, #799f0c, #ffe000);
+}
+
+.christmas-light-yellow-anim {
+    animation: glow-light-yellow 9s linear infinite;
+}
+
+@keyframes glow-light-yellow {
+    0%,
+    100% {
+        background: #ffe000;
+        box-shadow: 0 0.375rem 1.5rem 0.188rem #ffe000;
+    }
+
+    50% {
+        background: rgba(255, 224, 0, 0.8);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(255, 224, 0, 0.4);
+    }
+}
+
+.loco-light {
+    animation: loco-light-anim 3s linear infinite;
+}
+
+@keyframes loco-light-anim {
+    0%,
+    100% {
+        background: #ffe000;
+        box-shadow: 0 0.375rem 2.75rem 0.188rem #ffe000;
+    }
+
+    50% {
+        background: rgba(255, 224, 0, 0.8);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(255, 224, 0, 0.4);
+    }
+}
+
+.christmas-light-orange {
+    background: #f12711;
+    background: linear-gradient(to right, #f5af19, #f12711);
+}
+
+.christmas-light-orange-anim {
+    animation: glow-light-orange 3s linear infinite;
+}
+
+@keyframes glow-light-orange {
+    0%,
+    100% {
+        background: #f12711;
+        box-shadow: 0 0.375rem 1.5rem 0.188rem #f12711;
+    }
+
+    50% {
+        background: rgba(241, 39, 17, 0.8);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(241, 39, 17, 0.4);
+    }
+}
+
+.christmas-light-red {
+    background: #cb2d3e;
+    background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+.christmas-light-red-anim {
+    animation: glow-light-red 6s linear infinite;
+}
+
+@keyframes glow-light-red {
+    0%,
+    100% {
+        background: #cb2d3e;
+        box-shadow: 0 0.375rem 1.5rem 0.188rem #cb2d3e;
+    }
+
+    50% {
+        background: rgba(203, 45, 62, 0.6);
+        box-shadow: 0 0.375rem 1.5rem 0.188rem rgba(203, 45, 62, 0.2);
+    }
+}

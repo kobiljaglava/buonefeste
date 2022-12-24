@@ -1,0 +1,167 @@
+
+.surprise-border {
+    border: 1rem solid red;
+    padding: 1rem;
+    border-image: repeating-linear-gradient(-45deg,
+    green 0 0.5rem,
+    white 0 1rem,
+    red 0 1.5rem,
+    white 0 2rem) 16;
+}
+
+@font-face {
+    font-family: 'Cabin';
+
+    src: url('./assets/fonts/Cabin/Cabin-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-SemiBoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-MediumItalic.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-BoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-Italic.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('./assets/fonts/Cabin/Cabin-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Cabin/Cabin-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url('./assets/fonts/Podkova/Podkova-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Podkova/Podkova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url('./assets/fonts/Podkova/Podkova-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/Podkova/Podkova-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url('./assets/fonts/Podkova/Podkova-ExtraBold.woff2') format('woff2'),
+    url('./assets/fonts/Podkova/Podkova-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url('./assets/fonts/Podkova/Podkova-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Podkova/Podkova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url('./assets/fonts/Podkova/Podkova-Regular_1.woff2') format('woff2'),
+    url('./assets/fonts/Podkova/Podkova-Regular_1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url('./assets/fonts/Podkova/Podkova-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Podkova/Podkova-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url(./assets/fonts/PermanentMarker/PermanentMarker-Regular.woff2) format('woff2'), url(./assets/fonts/PermanentMarker/PermanentMarker-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url(./assets/fonts/Pacifico/Pacifico-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+
+.train {
+    animation: voyage 20s linear forwards;
+}
+
+@keyframes voyage {
+    0% {
+        left: -100vw;
+    }
+
+}
