@@ -1,11 +1,11 @@
 export function getCurrentDate() {
     let now = new Date();
-    let day = now.getDay();
-    let month = now.getMonth();
+    let month = now.getUTCMonth();
+    let day = now.getUTCDate();
     return {day, month};
 }
 
-export function formatDay(day){
+export function formatDay(day) {
     return day < 10 ? "0" + day : day;
 }
 
@@ -45,9 +45,14 @@ export function countdown() {
     }
 
     if (isNewYear) {
-        secondMessage = "Mancano " + days + (days < 1 ? " giorno" : " giorni") + " a Capodanno!";
+        secondMessage =
+            {
+                it: "Mancano " + days + (days < 1 ? " giorno" : " giorni") + " a Capodanno!",
+                sl: days + (days < 1 ? " dan" : " dni") + " do novega leta!"
+            }
     } else if (isBefana) {
-        secondMessage = "Mancano " + days + (days < 1 ? " giorno" : " giorni") + " alla Befana!";
+        secondMessage =
+            {it: "Mancano " + days + (days < 1 ? " giorno" : " giorni") + " alla Befana!"}
     }
 
     return {firstMessage, secondMessage};

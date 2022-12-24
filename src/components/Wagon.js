@@ -224,27 +224,35 @@ function Surprise(props) {
                                 <div
                                     className="absolute h-full w-full overflow-hidden bg-gray-100 my-rotate-y-180 backface-hidden surprise-border">
                                     <div
-                                        className="flex h-full w-full flex-col items-center justify-center p-2 pb-4 text-center text-lg text-gray-800 font-gloria align-center lg:p-4 lg:text-xl">
+                                        className="flex h-full w-full flex-col items-center justify-center p-2 pb-4 text-center text-sm text-gray-800 font-gloria align-center lg:p-4 lg:text-lg">
 
                                         {
                                             firstMessage === 'CHRISTMAS' &&
 
-                                            <span className="font-pacifico">
-                                                    <p className="pb-4">Tanti auguri di Buon Natale!</p>
-                                                    <p className="pb-4">Vesel božič!</p>
+                                            <span className="font-pacifico pb-2 lg:pb-4">
+                                                    <p className="lg:pb-2 text-red-500">Tanti auguri di Buon Natale!</p>
+                                                    <p className="lg:pb-2 text-green-500">Vesel božič!</p>
                                                 </span>
                                         }
 
                                         {
                                             firstMessage !== 'CHRISTMAS' &&
 
-                                            <span className="font-cabin">
-                                                   <p className="pb-4">Oggi festeggiamo {getTodaySaint(props.data.date.day)}</p>
-                                                </span>
+                                            <span className="font-cabin pb-2 lg:pb-4">
+                                                <p className="lg:pb-2">Oggi festeggiamo {getTodaySaint(props.data.date.day)}!</p>
+                                                <p className="lg:pb-2">Danes praznujemo {getTodaySaint(props.data.date.day)}!</p>
+                                            </span>
                                         }
 
                                         <span className="font-podkova">
-                                            <p className="pb-4">{secondMessage}</p>
+                                           {
+                                               secondMessage.it &&
+                                               <p className="lg:pb-2">{secondMessage.it}</p>
+                                           }
+                                            {
+                                                secondMessage.sl &&
+                                                <p className="lg:pb-2">{secondMessage.sl}</p>
+                                            }
                                             </span>
                                     </div>
                                 </div>

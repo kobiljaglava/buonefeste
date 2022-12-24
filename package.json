@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://kobiljaglava.github.io/buonefeste",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

@@ -40,7 +40,7 @@ export default function BefanaWagon() {
                                 <div className="flex flex-col">
                                     <div
                                         className="h-16 w-48 bg-white p-2 border-4 border-slate-100 text-center font-cabin lg:h-20 lg:p-4">
-                                        Clicca qui per scoprire un regolo
+                                        Clicca qui per scoprire un regolo.
                                     </div>
                                 </div>
                             )}
