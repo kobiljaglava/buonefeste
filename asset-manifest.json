@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/buonefeste/static/css/main.521e260b.css",
+    "main.css": "/buonefeste/static/css/main.d770035c.css",
     "main.js": "/buonefeste/static/js/main.e3067fde.js",
     "static/js/845.ee66a780.chunk.js": "/buonefeste/static/js/845.ee66a780.chunk.js",
     "static/media/mixkit-bell.wav": "/buonefeste/static/media/mixkit-bell.8496d03692c3713366d6.wav",
@@ -37,12 +37,12 @@
     "static/media/Cabin-Bold.woff2": "/buonefeste/static/media/Cabin-Bold.53b09231176ed679d1c0.woff2",
     "static/media/PermanentMarker-Regular.woff2": "/buonefeste/static/media/PermanentMarker-Regular.ff44bd08627da037a60a.woff2",
     "index.html": "/buonefeste/index.html",
-    "main.521e260b.css.map": "/buonefeste/static/css/main.521e260b.css.map",
+    "main.d770035c.css.map": "/buonefeste/static/css/main.d770035c.css.map",
     "main.e3067fde.js.map": "/buonefeste/static/js/main.e3067fde.js.map",
     "845.ee66a780.chunk.js.map": "/buonefeste/static/js/845.ee66a780.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.521e260b.css",
+    "static/css/main.d770035c.css",
     "static/js/main.e3067fde.js"
   ]
 }
