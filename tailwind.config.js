@@ -51,7 +51,7 @@ module.exports = {
                 'balloon': 'balloons 4s ease-in-out infinite',
                 'ring': 'ring 1.7s ease-in-out infinite',
                 'loco-light-anim': 'loco-light-anim 3s linear infinite',
-                'popcap': 'bang 700ms ease-out infinite',
+                'popcap': 'bang 700ms ease-out forwards',
                 'bang': 'bang 700ms ease-out forwards',
                 'befana':'bounce 3s linear infinite'
             },
