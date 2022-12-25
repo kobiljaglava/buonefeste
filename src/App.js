@@ -41,17 +41,19 @@ function App() {
         <>
             {help ? (
                 <div
-                    className="overflow-x-hidden overflow-y-auto fixed h-screen top-2 lg:top-4 left-0 right-0 z-[200] justify-center items-center flex"
+                    className="overflow-x-hidden overflow-y-auto fixed h-screen z-[200] justify-center items-center flex"
                     onClick={handleChange}
                 >
-                    <div className="flex items-center surprise-border justify-center h-1/2 bg-white gap-x-16  z-[200]                    ">
-                        <div className="flex flex-col p-12 font-podkova text-xl">
-                            <p className="pb-2">Per finire l'anno 2022 e iniziare il 2023, ci accompagna il treno che
-                                ogni giorni vi fara scoprire una foto di Drenchia.</p>
-                            <p className="pb-2">Basta cliccare sulla finestra, potete clicarre su i movimenti che
-                                vedete per avere un po di animazione.</p>
-                            <p className="pt-4 pb-2">Vi auguriamo un sereno Natale e un felice anno nuovo!</p>
-                            <p className="pt-8 pb-2">Kobilja Glava</p>
+                    <div className="flex items-center surprise-border justify-center h-screen w-screen bg-white gap-x-16  z-[200]">
+                        <div className="flex flex-col p-12 font-podkova text-lg lg:text-xl">
+                            <p className="pb-2">Per concludere l'anno 2022 e iniziare il 2023, unisciti a noi ogni giorno sul nostro treno.</p>
+                            <p className="pt-4 pb-2">Il treno va da sinistra a destra.</p>
+                            <p className="pb-2">
+                                Ogni giorno è possibile fare clic su una finestra per scoprire una sorpresa. È anche possibile fare clic su altre animazioni per scoprire altre sorprese.</p>
+
+                            <p className="pt-4 pb-2">Vi auguriamo un sereno Natale e un Felice Anno Nuovo!</p>
+                            <p className="pt-4 pb-2">Kobilja Glava</p>
+                            <p className="pt-4 pb-2 text-sm lg:text-lg">PS: Per scoprire il treno, fare clic in un punto qualsiasi di questo messaggio.</p>
                         </div>
                     </div>
                 </div>) : null}

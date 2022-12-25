@@ -3,11 +3,11 @@ import WheelSet from "./WheelSet";
 import "./BefanaWagon.css";
 
 export default function BefanaWagon() {
-    const [openedTap, setOpenedTap] = React.useState(false);
+    const [openGift, setOpenGift] = React.useState(false);
 
     const handleChange = () => {
-        if (!openedTap) {
-            setOpenedTap(true);
+        if (!openGift) {
+            setOpenGift(true);
         }
     };
 
@@ -36,7 +36,7 @@ export default function BefanaWagon() {
                 <div className="flex flex-row justify-center -mb-[0.48rem] lg:-mb-[0.96rem]">
                     <div className="flex items-end justify-end h-26 lg:h-48">
                         <div className="flex flex-col items-center pr-1 pl-1">
-                            {openedTap && (
+                            {openGift && (
                                 <div className="flex flex-col">
                                     <div
                                         className="h-16 w-48 bg-white p-2 border-4 border-slate-100 text-center font-cabin lg:h-20 lg:p-4">
@@ -44,7 +44,7 @@ export default function BefanaWagon() {
                                     </div>
                                 </div>
                             )}
-                            {!openedTap && (
+                            {!openGift && (
                                 <div className="flex flex-col">
                                     <div className="flex flex-row">
                                         <div

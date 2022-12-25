@@ -9,11 +9,7 @@ export default function NewYearWagon() {
             <div className="flex flex-col">
                 <div className="flex flex-row items-end justify-center gap-4 lg:gap-8">
                     <PartyHat/>
-                    <Balloon
-                        type={{
-                            paper: "bg-gradient-to-r from-emerald-400 to-cyan-400",
-                        }}
-                    />
+                    <Balloon type={ "bg-gradient-to-r from-emerald-400 to-cyan-400"}/>
                     <Bottle/>
                 </div>
             </div>
@@ -70,34 +66,34 @@ function Bottle() {
     );
 }
 
-function Balloon(props) {
-    const [openedTap, setOpenedTap] = React.useState(false);
+function Balloon({type}) {
+    const [detached, setDetached] = React.useState(false);
 
     const handleChange = () => {
-        if (!openedTap) {
-            setOpenedTap(true);
+        if (!detached) {
+            setDetached(true);
         }
     };
 
     return (
         <>
-            {openedTap && (
+            {detached && (
                 <div
                     className="-mb-4 flex flex-col items-center justify-center animate-popcap lg:-mb-8"
                     style={{transform: `translateY(-64rem)`}}
                 >
                     <div
-                        className={`w-[4rem] h-[5rem] lg:w-[8rem] lg:h-[10rem] ${props.type.paper} shadow-inner`}
+                        className={`w-[4rem] h-[5rem] lg:w-[8rem] lg:h-[10rem] ${type} shadow-inner`}
                         style={{borderRadius: "50% 50% 50% 50% / 32% 32% 68% 68% "}}
                     />
                     <div
-                        className={`lg:h-4 lg:w-4 h-2 w-2 ${props.type.paper} border-b-1  border-t-2 lg:border-t-4 border-gray-500`}
+                        className={`lg:h-4 lg:w-4 h-2 w-2 ${type} border-b-1  border-t-2 lg:border-t-4 border-gray-500`}
                         style={{clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)"}}
                     />
                     <div className="bg-gray-500 h-[5rem] w-[0.0625rem] lg:h-[10rem] lg:w-[0.125rem]"/>
                 </div>
             )}
-            {!openedTap && (
+            {!detached && (
                 <div
                     className="-mb-4 flex flex-col items-center justify-center animate-balloon lg:-mb-8"
                     style={{
@@ -106,11 +102,11 @@ function Balloon(props) {
                     onClick={handleChange}
                 >
                     <div
-                        className={`w-[4rem] h-[5rem] lg:w-[8rem] lg:h-[10rem] ${props.type.paper} shadow-inner`}
+                        className={`w-[4rem] h-[5rem] lg:w-[8rem] lg:h-[10rem] ${type} shadow-inner`}
                         style={{borderRadius: "50% 50% 50% 50% / 32% 32% 68% 68% "}}
                     />
                     <div
-                        className={`lg:h-4 lg:w-4 h-2 w-2 ${props.type.paper} border-b-1  border-t-2 lg:border-t-4 border-gray-500`}
+                        className={`lg:h-4 lg:w-4 h-2 w-2 ${type} border-b-1  border-t-2 lg:border-t-4 border-gray-500`}
                         style={{clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)"}}
                     />
                     <div className="bg-gray-500 h-[5rem] w-[0.0625rem] lg:h-[10rem] lg:w-[0.125rem]"/>
@@ -121,17 +117,17 @@ function Balloon(props) {
 }
 
 function Tap() {
-    const [openedTap, setOpenedTap] = React.useState(false);
+    const [openBottle, setOpenBottle] = React.useState(false);
 
     const handleChange = () => {
-        if (!openedTap) {
-            setOpenedTap(true);
+        if (!openBottle) {
+            setOpenBottle(true);
         }
     };
 
     return (
         <>
-            {openedTap && (
+            {openBottle && (
                 <>
                     <div
                         className="mr-1 ml-1 h-4 w-3 bg-yellow-500 opacity-0 animate-popcap lg:h-8 lg:w-6"
@@ -142,7 +138,7 @@ function Tap() {
                     </div>
                 </>
             )}
-            {!openedTap && (
+            {!openBottle && (
                 <div
                     className="mr-1 -mb-2 ml-1 h-4 w-3 animate-bounce bg-yellow-500 lg:-mb-4 lg:h-8 lg:w-6"
                     onClick={handleChange}

@@ -108,11 +108,11 @@ export default function Locomotive() {
     );
 }
 
-function LocomotiveWindow(props) {
+function LocomotiveWindow({conductor}) {
     return (
         <div
             className="flex h-14 w-12 justify-center rounded-t-3xl border-2 border-yellow-600 bg-cyan-200 lg:h-28 lg:w-24 lg:border-4">
-            {props.conductor && (
+            {conductor && (
                 <div className="flex items-end">
                     <div className="flex flex-col place-items-center">
                         <div className="flex flex-col z-50 -mb-[0.3125rem] lg:-mb-2.5 ml-0.5 lg:ml-1 place-items-start">

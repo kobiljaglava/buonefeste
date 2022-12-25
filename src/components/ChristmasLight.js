@@ -29,10 +29,10 @@ class ChristmasLight extends React.Component {
     }
 }
 
-export default function ChristmasLights(props) {
+export default function ChristmasLights({lights}) {
     return (
         <>
-            {props.lights.map((light) => (
+            {lights.map((light) => (
                 <ChristmasLight key={shortid.generate()} light={light}/>
             ))}
         </>

@@ -35,21 +35,21 @@ export default function Wagon(props) {
     );
 }
 
-function Door(props) {
+function Door({type}) {
     let generalStyle, bottomStyle, topStyle;
 
-    if (props.type === "center") {
+    if (type === "center") {
         generalStyle = "mr-2 lg:mr-4 w-16 lg:w-32 ml-2 lg:ml-4";
         bottomStyle =
             "w-16 lg:w-32 border-b-2 lg:border-b-4  border-l-2 border-r-2 border-yellow-600";
         topStyle =
             "w-16 lg:w-32 rounded-t-3xl border-t-2 lg:border-t-4  border-l-2 border-r-2 bg-green-900  ";
-    } else if (props.type === "left") {
+    } else if (type === "left") {
         generalStyle = "mr-2 lg:mr-4 w-8 lg:w-16";
         bottomStyle = "w-8 lg:w-16 rounded-br-lg";
         topStyle =
             "w-8 lg:w-16 rounded-tr-3xl border-t-2 lg:border-t-4 border-l-2  lg:border-l-4   bg-gray-100";
-    } else if (props.type === "right") {
+    } else if (type === "right") {
         generalStyle = "ml-2 lg:ml-4 w-8 lg:w-16";
         bottomStyle = "w-8 lg:w-16 rounded-bl-lg";
         topStyle =
@@ -63,7 +63,7 @@ function Door(props) {
             <div
                 className={`flex h-[4.5rem] lg:h-36  border-yellow-600 align-center justify-center items-center ${topStyle}`}
             >
-                {props.type === "center" && (
+                {type === "center" && (
                     <div className="h-16 w-16 rounded-full bg-cyan-200"/>
                 )}
             </div>
@@ -79,13 +79,13 @@ function Door(props) {
     );
 }
 
-function WagonBottom(props) {
+function WagonBottom({numberOfWindows}) {
     return (
         <div className="flex flex-col">
             <div className="mr-2 ml-2 h-4 rounded-b-3xl bg-black lg:mr-4 lg:ml-4 lg:h-8"/>
             <div className="flex flex-row justify-between">
                 <WheelSet kind={{size: "small", type: "Wagon"}}/>
-                {props.numberOfWindows > 4 && (
+                {numberOfWindows > 4 && (
                     <WheelSet kind={{size: "small", type: "Wagon"}}/>
                 )}
                 <WheelSet kind={{size: "small", type: "Wagon"}}/>
@@ -191,32 +191,32 @@ function Window({index}) {
 }
 
 
-function Surprise(props) {
-    const [checked, setChecked] = React.useState(true);
+function Surprise({data}) {
+    const [display, setDisplay] = React.useState(true);
 
     const handleChange = () => {
-        setChecked(!checked);
+        setDisplay(!display);
     };
 
     let message = countdown();
 
     return (
         <>
-            {checked ? (
+            {display ? (
                 <div
                     className="overflow-x-hidden overflow-y-auto fixed top-2 lg:top-4 left-0 right-0 z-[200] justify-center items-center flex"
                     onClick={handleChange}
                 >
                     <section className="flex items-center justify-center h-screen text-white gap-x-16  z-[200]">
                         <div
-                            className={` ${props.data.style} bg-transparent cursor-pointer group perspective`}
+                            className={` ${data.style} bg-transparent cursor-pointer group perspective`}
                         >
                             <div
                                 className="relative h-full w-full duration-1000 preserve-3d group-hover:my-rotate-y-180">
                                 <div
                                     className="absolute h-full w-full border-t-4 border-r-4 border-b-8 border-l-4 backface-hidden">
                                     <img
-                                        src={props.data.src}
+                                        src={data.src}
                                         alt="Una foto di Drenchia"
                                         className="h-full w-full"
                                     />
@@ -227,7 +227,7 @@ function Surprise(props) {
                                         className="flex h-full w-full flex-col items-center justify-center p-2 pb-4 text-center text-sm text-gray-800 font-gloria align-center lg:p-4 lg:text-lg">
 
                                         {
-                                            props.data.date.day === 25 &&
+                                            data.date.day === 25 &&
 
                                             <span className="font-pacifico pb-2 lg:pb-4">
                                                     <p className="lg:pb-2 text-red-500">Tanti auguri di Buon Natale!</p>
@@ -236,11 +236,11 @@ function Surprise(props) {
                                         }
 
                                         {
-                                            props.data.date.day !== 25 &&
+                                            data.date.day !== 25 &&
 
                                             <span className="font-cabin pb-2 lg:pb-4">
-                                                <p className="lg:pb-2">Oggi festeggiamo {getTodaySaint(props.data.date.day)}!</p>
-                                                <p className="lg:pb-2">Danes praznujemo {getTodaySaint(props.data.date.day)}!</p>
+                                                <p className="lg:pb-2">Oggi festeggiamo {getTodaySaint(data.date.day)}!</p>
+                                                <p className="lg:pb-2">Danes praznujemo {getTodaySaint(data.date.day)}!</p>
                                             </span>
                                         }
 
