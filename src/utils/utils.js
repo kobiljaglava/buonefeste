@@ -47,12 +47,12 @@ export function countdown() {
     if (isNewYear) {
         secondMessage =
             {
-                it: "Mancano " + days + (days < 1 ? " giorno" : " giorni") + " a Capodanno!",
-                sl: days + (days < 1 ? " dan" : " dni") + " do novega leta!"
+                it: "Mancano " + days + (days <= 1 ? " giorno" : " giorni") + " a Capodanno!",
+                sl: days + (days <= 1 ? " dan" : " dni") + " do novega leta!"
             }
     } else if (isBefana) {
         secondMessage =
-            {it: "Mancano " + days + (days < 1 ? " giorno" : " giorni") + " alla Befana!"}
+            {it: "Mancano " + days + (days <= 1 ? " giorno" : " giorni") + " alla Befana!"}
     }
 
     return {firstMessage, secondMessage};
