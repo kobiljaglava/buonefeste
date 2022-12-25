@@ -1,3 +1,5 @@
+import React from "react";
+
 export function getCurrentDate() {
     let now = new Date();
     let month = now.getUTCMonth();
@@ -6,11 +8,7 @@ export function getCurrentDate() {
 }
 
 export function formatDay(day) {
-    return day < 10 ? "0" + day : day;
-}
-
-export function isChristmas() {
-    return getCurrentDate().day === 25 && getCurrentDate().month === 11;
+    return (day < 10 ? "0" : "") + day;
 }
 
 export function countdown() {
@@ -38,24 +36,20 @@ export function countdown() {
         days = Math.floor(timeout / (1000 * 60 * 60 * 24));
     }
 
-    let firstMessage, secondMessage;
-
-    if (isChristmas()) {
-        firstMessage = "CHRISTMAS";
-    }
+    let message;
 
     if (isNewYear) {
-        secondMessage =
+        message =
             {
                 it: "Mancano " + days + (days <= 1 ? " giorno" : " giorni") + " a Capodanno!",
                 sl: days + (days <= 1 ? " dan" : " dni") + " do novega leta!"
             }
     } else if (isBefana) {
-        secondMessage =
+        message =
             {it: "Mancano " + days + (days <= 1 ? " giorno" : " giorni") + " alla Befana!"}
     }
 
-    return {firstMessage, secondMessage};
+    return message;
 }
 
 export function getTodaySaint(day) {
@@ -82,4 +76,16 @@ export function range(start, end) {
         foo.push(i);
     }
     return foo;
+}
+
+
+export function useOnceCall(cb, condition = true) {
+    const isCalledRef = React.useRef(false);
+
+    React.useEffect(() => {
+        if (condition && !isCalledRef.current) {
+            isCalledRef.current = true;
+            cb();
+        }
+    }, [cb, condition]);
 }

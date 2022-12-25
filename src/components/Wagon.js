@@ -1,7 +1,7 @@
 import React from "react";
 
 import WheelSet from "./WheelSet";
-import {countdown, formatDay, getCurrentDate, getTodaySaint, isChristmas, range} from "../utils/utils";
+import {countdown, formatDay, getCurrentDate, getTodaySaint, range} from "../utils/utils";
 import trainData from "../data/trainData.js";
 import shortid from "shortid";
 
@@ -159,7 +159,7 @@ function Window({index}) {
                         <div className="window-opened">
                             <div className="z-10 h-12 w-16 bg-cyan-200 lg:h-24 lg:w-32"/>
                             <div className="z-20 -mt-12 h-12 w-16 lg:-mt-24 lg:h-24 lg:w-32">
-                                <SeatsWithPeople/>
+                                <SeatsWithPeople day={windowData.date.day}/>
                             </div>
 
                             <div
@@ -198,7 +198,7 @@ function Surprise(props) {
         setChecked(!checked);
     };
 
-    let {firstMessage, secondMessage} = countdown();
+    let message = countdown();
 
     return (
         <>
@@ -227,7 +227,7 @@ function Surprise(props) {
                                         className="flex h-full w-full flex-col items-center justify-center p-2 pb-4 text-center text-sm text-gray-800 font-gloria align-center lg:p-4 lg:text-lg">
 
                                         {
-                                            firstMessage === 'CHRISTMAS' &&
+                                            props.data.date.day === 25 &&
 
                                             <span className="font-pacifico pb-2 lg:pb-4">
                                                     <p className="lg:pb-2 text-red-500">Tanti auguri di Buon Natale!</p>
@@ -236,7 +236,7 @@ function Surprise(props) {
                                         }
 
                                         {
-                                            firstMessage !== 'CHRISTMAS' &&
+                                            props.data.date.day !== 25 &&
 
                                             <span className="font-cabin pb-2 lg:pb-4">
                                                 <p className="lg:pb-2">Oggi festeggiamo {getTodaySaint(props.data.date.day)}!</p>
@@ -246,12 +246,12 @@ function Surprise(props) {
 
                                         <span className="font-podkova">
                                            {
-                                               secondMessage.it &&
-                                               <p className="lg:pb-2">{secondMessage.it}</p>
+                                               message.it &&
+                                               <p className="lg:pb-2">{message.it}</p>
                                            }
                                             {
-                                                secondMessage.sl &&
-                                                <p className="lg:pb-2">{secondMessage.sl}</p>
+                                                message.sl &&
+                                                <p className="lg:pb-2">{message.sl}</p>
                                             }
                                             </span>
                                     </div>
@@ -322,10 +322,9 @@ function buildAPerson() {
     };
 }
 
-function SeatsWithPeople() {
+function SeatsWithPeople({day}) {
     let people = getPeople();
-    let christmas = isChristmas();
-
+    let christmas = day === 25;
 
     return (
         <div className="flex h-12 flex-row justify-between lg:h-24">
@@ -336,8 +335,6 @@ function SeatsWithPeople() {
                     (
                         <>
                             <div className="flex flex-col place-items-center">
-
-
                                 <div className="flex flex-col place-items-center"
                                 >
                                     <div className="h-1 w-1 rounded-full bg-white lg:h-2 lg:w-2"/>
