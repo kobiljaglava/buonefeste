@@ -21,13 +21,13 @@ function App() {
                 behavior: "smooth",
             });
         } else {
-            document
-                .querySelector("#Window-" + formattedDay)
-                .scrollIntoView({
-                    behavior: "smooth",
-                });
+            if (document.getElementById("#Window-" + formattedDay) !== null) {
+                document
+                    .querySelector("#Window-" + formattedDay)
+                    .scrollIntoView({behavior: "smooth",});
+            }
         }
-        localStorage.setItem("kgtchutchu", day);
+        localStorage.setItem("kgtchutchu", formattedDay);
         localStorage.setItem("showHelp", "false");
     })
 

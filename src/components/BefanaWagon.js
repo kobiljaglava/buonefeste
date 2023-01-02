@@ -3,16 +3,8 @@ import WheelSet from "./WheelSet";
 import "./BefanaWagon.css";
 
 export default function BefanaWagon() {
-    const [openGift, setOpenGift] = React.useState(false);
-
-    const handleChange = () => {
-        if (!openGift) {
-            setOpenGift(true);
-        }
-    };
-
     return (
-        <div className="flex flex-col" onClick={handleChange}>
+        <div className="flex flex-col">
             <div className="-mb-2 flex flex-col lg:-mb-4">
                 <div className="h-80 w-full scale-50">
                     <div className="befana animate-befana">
@@ -36,15 +28,6 @@ export default function BefanaWagon() {
                 <div className="flex flex-row justify-center -mb-[0.48rem] lg:-mb-[0.96rem]">
                     <div className="flex items-end justify-end h-26 lg:h-48">
                         <div className="flex flex-col items-center pr-1 pl-1">
-                            {openGift && (
-                                <div className="flex flex-col">
-                                    <div
-                                        className="h-16 w-48 bg-white p-2 border-4 border-slate-100 text-center font-cabin lg:h-20 lg:p-4">
-                                        Clicca qui per scoprire un regolo.
-                                    </div>
-                                </div>
-                            )}
-                            {!openGift && (
                                 <div className="flex flex-col">
                                     <div className="flex flex-row">
                                         <div
@@ -63,7 +46,6 @@ export default function BefanaWagon() {
                                         />
                                     </div>
                                 </div>
-                            )}
                             <div className="flex flex-row">
                                 <div
                                     className="w-32 h-16 lg:h-32 bg-gradient-to-l  from-red-500 to-red-700 border-r-8 lg:border-r-16 border-yellow-500"
