@@ -225,7 +225,6 @@ function Surprise({data}) {
                                     className="absolute h-full w-full overflow-hidden bg-gray-100 my-rotate-y-180 backface-hidden surprise-border">
                                     <div
                                         className="flex h-full w-full flex-col items-center justify-center p-2 pb-4 text-center text-sm text-gray-800 font-gloria align-center lg:p-4 lg:text-lg">
-
                                         {
                                             data.date.day === 25 &&
 
@@ -244,6 +243,7 @@ function Surprise({data}) {
                                             </span>
                                         }
 
+                                        { message &&
                                         <span className="font-podkova">
                                            {
                                                message.it &&
@@ -254,6 +254,7 @@ function Surprise({data}) {
                                                 <p className="lg:pb-2">{message.sl}</p>
                                             }
                                             </span>
+                                          }
                                     </div>
                                 </div>
                             </div>
