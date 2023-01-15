@@ -190,7 +190,7 @@
     left: 4.5rem;
     width: 9rem;
     height: 9rem;
-    border-radius: 40% 45% 25% 25% / 51% 51% 25% 25%;;
+    border-radius: 40% 45% 25% 25% / 51% 51% 25% 25%;
     transform: rotate(-45deg);
     background-image: linear-gradient(to top, rgb(100, 116, 139), rgb(254, 249, 195));
     bottom: -2rem;

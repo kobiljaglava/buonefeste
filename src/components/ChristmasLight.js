@@ -1,7 +1,5 @@
 import React from "react";
 import "./ChristmasLight.css";
-import shortid from "shortid";
-
 
 class ChristmasLight extends React.Component {
     constructor(props) {
@@ -32,8 +30,8 @@ class ChristmasLight extends React.Component {
 export default function ChristmasLights({lights}) {
     return (
         <>
-            {lights.map((light) => (
-                <ChristmasLight key={shortid.generate()} light={light}/>
+            {lights.map((light, index) => (
+                <ChristmasLight key={index} light={light}/>
             ))}
         </>
     );

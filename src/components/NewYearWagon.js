@@ -1,7 +1,6 @@
 import React from "react";
 import WheelSet from "./WheelSet";
 import {range} from "../utils/utils";
-import shortid from "shortid";
 
 export default function NewYearWagon() {
     return (
@@ -183,6 +182,6 @@ function Confetto() {
 }
 
 function Confetti() {
-    return range(0, 23).map(() => <Confetto key={shortid.generate()}/>);
+    return range(0, 23).map((index) => <Confetto key={index}/>);
 }
 

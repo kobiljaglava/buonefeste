@@ -3,7 +3,6 @@ import React from "react";
 import WheelSet from "./WheelSet";
 import {countdown, formatDay, getCurrentDate, getTodaySaint, range} from "../utils/utils";
 import trainData from "../data/trainData.js";
-import shortid from "shortid";
 
 export default function Wagon(props) {
     const list = range(props.days.startId, props.days.endId).reverse();
@@ -95,7 +94,7 @@ function WagonBottom({numberOfWindows}) {
 }
 
 
-export const getWindows = (list) => list.map((item) => <Window key={shortid.generate()} index={item}/>);
+export const getWindows = (list) => list.map((item, index) => <Window key={index} index={item}/>);
 
 function Window({index}) {
     let windowData = trainData.data.windows[index - 1];

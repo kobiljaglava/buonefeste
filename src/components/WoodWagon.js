@@ -1,6 +1,5 @@
 import WheelSet from "./WheelSet";
 import React from "react";
-import shortid from "shortid";
 
 export default function WoodWagon() {
     return (
@@ -54,9 +53,9 @@ export default function WoodWagon() {
 }
 
 const Woods = (list) =>
-    list.map((item) => (
+    list.map((item, index) => (
         <div
-            key={shortid.generate()}
+            key={index}
             className={`w-6 lg:w-12 h-4 lg:h-8 -ml-0.5 lg:-ml-1 ${
                 item ? "-rotate-45" : "rotate-45"
             } bg-gradient-to-b rounded-xl from-yellow-900 to-stone-700`}
