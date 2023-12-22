@@ -19,10 +19,10 @@ export function countdown() {
     let isNewYear, isBefana = false;
 
     if (day >= 25 && day <= 31 && month === 11) {
-        countdownDate = new Date("Jan 1, 2023 00:00:00").getTime();
+        countdownDate = new Date("Jan 1, 2024 00:00:00").getTime();
         isNewYear = true;
     } else if (day >= 1 && day <= 6 && month === 0) {
-        countdownDate = new Date("Jan 6, 2023 00:00:00").getTime();
+        countdownDate = new Date("Jan 6, 2024 00:00:00").getTime();
         isBefana = true;
     } else {
         countdownDate = null;
